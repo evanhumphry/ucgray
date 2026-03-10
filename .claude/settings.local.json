@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "WebFetch(domain:ucgray.com)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git add .gitignore eleventy.config.js package.json package-lock.json src/ .github/ .claude/launch.json)",
+      "Bash(git commit:*)",
+      "Bash(git push -u origin main)",
+      "Bash(git remote set-url origin git@github.com:evanhumphry/ucgray.git)",
+      "Bash(gh api repos/evanhumphry/ucgray/pages -X POST -f build_type=workflow)"
+    ]
+  }
+}

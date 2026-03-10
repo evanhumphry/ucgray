@@ -1,0 +1,25 @@
+<header class="site-header">
+  <nav class="nav-container">
+    <a href="{{ '/' | url }}" class="logo">{{ site.name }}</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="{{ '/' | url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a></li>
+      <li><a href="{{ '/about/' | url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About Us</a></li>
+      <li><a href="{{ '/hunt-of-a-lifetime/' | url }}" {% if page.url == '/hunt-of-a-lifetime/' %}aria-current="page"{% endif %}>Hunt of a Lifetime</a></li>
+      <li><a href="{{ '/officers/' | url }}" {% if page.url == '/officers/' %}aria-current="page"{% endif %}>Officers</a></li>
+      <li><a href="{{ '/get-involved/' | url }}" {% if page.url == '/get-involved/' %}aria-current="page"{% endif %}>Get Involved</a></li>
+      <li><a href="{{ '/contact/' | url }}" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  document.querySelector('.nav-toggle').addEventListener('click', function () {
+    const nav = document.querySelector('.nav-links');
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('open');
+  });
+</script>

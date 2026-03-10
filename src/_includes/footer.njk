@@ -1,0 +1,34 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>{{ site.fullName }}</h3>
+      <p>{{ site.tagline }}</p>
+    </div>
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="{{ '/about/' | url }}">About Us</a></li>
+        <li><a href="{{ '/hunt-of-a-lifetime/' | url }}">Hunt of a Lifetime</a></li>
+        <li><a href="{{ '/officers/' | url }}">Officers</a></li>
+        <li><a href="{{ '/get-involved/' | url }}">Get Involved</a></li>
+        <li><a href="{{ '/contact/' | url }}">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Contact</h4>
+      <p><a href="mailto:{{ site.email }}" style="color: #94a3b8;">{{ site.email }}</a></p>
+      <p>{{ site.address }}</p>
+    </div>
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="{{ site.social.facebook }}" aria-label="Facebook">FB</a>
+        <a href="{{ site.social.instagram }}" aria-label="Instagram">IG</a>
+        <a href="{{ site.social.twitter }}" aria-label="Twitter">X</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 {{ site.fullName }}. All rights reserved.</p>
+  </div>
+</footer>
